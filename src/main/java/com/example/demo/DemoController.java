@@ -13,7 +13,7 @@ import java.util.Map;
 @Slf4j
 public class DemoController {
     @GetMapping("/payment")
-    public List<Payment> getOrders(@RequestHeader Map<String, String> RequestHeader) {
+    public List<Payment> getpayment(@RequestHeader Map<String, String> RequestHeader) {
         log.info("request {}", RequestHeader);
         return Arrays.asList(
                 new Payment(1L, "book", 1234.00),

@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orders
+  name: payment
   labels:
-    app: orders
+    app: payment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: orders
+      app: payment
   template:
     metadata:
       labels:
-        app: orders
+        app: payment
         version: $IMAGE_TAG
     spec:
       containers:
-      - name: orders
-        image: maxca789/orders:$IMAGE_TAG
+      - name: payment
+        image: naponm/payment:$IMAGE_TAG
         ports:
         - containerPort: 9099
         resources:
